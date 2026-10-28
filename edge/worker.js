@@ -14,7 +14,9 @@ const SECURITY_HEADERS = {
   "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
   "Content-Security-Policy": [
     "default-src 'self'",
-    `connect-src 'self' ${API_ORIGIN}`,
+    // Cloudflare Web Analytics (cookieless) is injected automatically on proxied zones.
+    "script-src 'self' https://static.cloudflareinsights.com",
+    `connect-src 'self' ${API_ORIGIN} https://cloudflareinsights.com`,
     "img-src 'self' data:",
     "base-uri 'none'",
     "form-action 'none'",

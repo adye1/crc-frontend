@@ -1,0 +1,6 @@
+:root { --fg:#1b1f23; --bg:#fafafa; --accent:#0a66c2; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6e6e6; --bg:#14161a; --accent:#6cb6ff; } }
+body { font-family: system-ui, sans-serif; color:var(--fg); background:var(--bg); max-width:48rem; margin:2rem auto; padding:0 1rem; line-height:1.6; }
+h1, h2 { border-bottom:2px solid var(--accent); padding-bottom:.25rem; }
+a { color:var(--accent); }
+footer { margin-top:3rem; font-size:.9rem; opacity:.8; }

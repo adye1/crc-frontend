@@ -1,0 +1,60 @@
+name: frontend
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  RESOURCE_GROUP: rg-crc-frontend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    outputs:
+      siteUrl: ${{ steps.infra.outputs.siteUrl }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Deploy infrastructure (Bicep)
+        id: infra
+        uses: azure/arm-deploy@v2
+        with:
+          resourceGroupName: ${{ env.RESOURCE_GROUP }}
+          template: infra/main.bicep
+          parameters: infra/main.bicepparam
+
+      - name: Enable static website
+        run: |
+          az storage blob service-properties update \
+            --account-name "${{ steps.infra.outputs.storageName }}" \
+            --static-website --index-document index.html --404-document 404.html \
+            --auth-mode login
+
+      - name: Upload site
+        run: |
+          az storage blob upload-batch \
+            --account-name "${{ steps.infra.outputs.storageName }}" \
+            --destination '$web' --source site --overwrite --auth-mode login
+
+  smoke-test:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Site is up and has the counter
+        env:
+          SITE_URL: ${{ needs.deploy.outputs.siteUrl }}
+        run: |
+          set -euo pipefail
+          curl -fsS --retry 5 --retry-delay 5 --retry-all-errors "$SITE_URL" -o page.html
+          grep -q 'id="counter"' page.html
+          curl -fsS "${SITE_URL}counter.js" | grep -q 'api/visitors'

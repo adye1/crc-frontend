@@ -50,6 +50,9 @@ export default {
     for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
       response.headers.set(name, value);
     }
+    if (originResponse.ok) {
+      response.headers.set("Cache-Control", "public, max-age=300");
+    }
     response.headers.delete("x-ms-request-id");
     response.headers.delete("x-ms-version");
     return response;

@@ -16,3 +16,6 @@ ul { padding-left:1.25rem; }
 .tags li { background:var(--chip); border-radius:999px; padding:.15rem .75rem; font-size:.9rem; }
 footer { margin-top:3rem; font-size:.9rem; color:var(--muted); }
 @media print { body { background:#fff; color:#000; margin:0; } a { color:#000; } footer { display:none; } }
+.note { color:var(--muted); font-size:.9rem; margin:.25rem 0 0; }
+.tags a { text-decoration:none; }
+.tags a:hover { text-decoration:underline; }

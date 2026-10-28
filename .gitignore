@@ -10,3 +10,5 @@ __pycache__/
 .venv/
 cypress/videos/
 cypress/screenshots/
+
+.wrangler/

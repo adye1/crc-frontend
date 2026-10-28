@@ -5,17 +5,33 @@
 
 My resume as a static website on Azure Storage, deployed by GitHub Actions. It calls a serverless API ([backend repo](https://github.com/adye1/crc-backend)) to show a live visitor count.
 
-**Live site:** https://stcrcfront99661.z13.web.core.windows.net/ (custom domain still to come)
+**Live site:** https://adamdye.dev/
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-  B[Browser] -->|HTTPS| S[(Azure Storage<br/>static website)]
+  B[Browser] -->|HTTPS| CF[Cloudflare<br/>DNS, TLS, edge cache]
+  CF --> W[Worker<br/>host header, security headers]
+  W --> S[(Azure Storage<br/>static website)]
   B -->|POST /api/visitors| F[Azure Function]
   F --> C[(Cosmos DB)]
   GH[GitHub Actions] -->|OIDC, no stored keys| S
 ```
+
+## Custom domain and edge
+
+`adamdye.dev` is registered and served through Cloudflare's free plan. The Azure storage endpoint rejects requests that carry a foreign Host header, and the free plan cannot rewrite it with an Origin Rule (Enterprise only). A small Worker in [`edge/`](edge/) does the proxying instead:
+
+- forwards requests to the storage site (the Worker's `fetch()` sets the correct Host header)
+- redirects `www` and plain `http://` to `https://adamdye.dev`
+- allows only GET and HEAD
+- adds HSTS, a strict Content-Security-Policy, `nosniff`, a referrer policy and a permissions policy
+- caches static files at the edge for 5 minutes, so site updates appear without a manual purge
+
+Deploy it with `npx wrangler deploy` from `edge/` after `wrangler login`. The Worker is not in the GitHub Actions pipeline yet, because that needs a scoped Cloudflare API token.
+
+I chose Cloudflare over Azure Front Door because Front Door Standard costs about $35 a month before usage.
 
 ## Pipeline
 
@@ -43,6 +59,6 @@ Every push to `main`:
 
 ## Not done yet
 
-- Custom domain and HTTPS in front of the storage endpoint (planned with Azure Front Door, or a cheaper alternative after checking pricing)
-- Cache purge step, which applies once a CDN is in front
+- Deploying the Worker from the pipeline with a scoped API token
+- SPF and DMARC records that reject email spoofed from the domain
 - Browser-level end-to-end test with Cypress

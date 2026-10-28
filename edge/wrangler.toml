@@ -1,0 +1,9 @@
+name = "adamdye-dev-edge"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+routes = [
+  { pattern = "adamdye.dev/*", zone_name = "adamdye.dev" },
+  { pattern = "www.adamdye.dev/*", zone_name = "adamdye.dev" },
+]

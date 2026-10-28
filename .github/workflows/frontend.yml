@@ -58,3 +58,9 @@ jobs:
           curl -fsS --retry 5 --retry-delay 5 --retry-all-errors "$SITE_URL" -o page.html
           grep -q 'id="counter"' page.html
           curl -fsS "${SITE_URL}counter.js" | grep -q 'api/visitors'
+      - name: Custom domain serves the site over HTTPS with security headers
+        run: |
+          set -euo pipefail
+          curl -fsSI --retry 5 --retry-delay 5 --retry-all-errors https://adamdye.dev/ | tee headers.txt
+          grep -qi '^strict-transport-security' headers.txt
+          grep -qi '^content-security-policy' headers.txt

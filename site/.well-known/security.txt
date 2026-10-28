@@ -1,0 +1,5 @@
+Contact: mailto:adamsdye@outlook.com
+Expires: 2027-10-28T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://adamdye.dev/.well-known/security.txt
+Policy: https://github.com/adye1/crc-frontend/blob/main/SECURITY.md

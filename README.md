@@ -5,7 +5,7 @@
 
 My resume as a static website on Azure Storage, deployed by GitHub Actions. It calls a serverless API ([backend repo](https://github.com/adye1/crc-backend)) to show a live visitor count.
 
-**Live site:** https://adamdye.dev/
+**Live site:** https://adamdye.dev/ · **Write-up:** [What a security leader learned building the Cloud Resume Challenge on Azure](https://adamdye.substack.com/p/what-a-security-leader-learned-building)
 
 ## Architecture
 

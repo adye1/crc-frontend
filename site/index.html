@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Adam Dye — Principal Security Architect: Zero Trust, cloud security, and AI system security.">
-  <meta name="theme-color" content="#0a1020">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Adam Dye — Principal Security Architect">
   <meta property="og:description" content="Zero Trust, cloud security, and AI system security. 10+ years across classified, critical infrastructure, and regulated environments.">
   <meta property="og:type" content="website">
@@ -12,208 +12,140 @@
   <title>Adam Dye — Principal Security Architect</title>
   <link rel="canonical" href="https://adamdye.dev/">
   <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="hero">
-    <div class="wrap">
-      <nav class="nav" aria-label="Sections">
-        <span class="mark" aria-hidden="true">AD</span>
-        <ul>
-          <li><a href="#profile">profile</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#experience">experience</a></li>
-          <li><a href="#certs">credentials</a></li>
-        </ul>
-      </nav>
+  <header class="wrap top">
+    <h1>Adam Dye</h1>
+    <p class="role">Principal Security Architect</p>
+    <p class="focus">Zero Trust · Cloud Security · AI System Security</p>
 
-      <p class="eyebrow">// security architecture</p>
-      <h1>Adam Dye</h1>
-      <p class="role">Principal Security Architect</p>
-      <p class="focus">Zero Trust · Cloud Security · AI System Security</p>
+    <p class="meta">
+      Chesapeake, VA · Open to relocation and remote<br>
+      <a href="mailto:adamsdye@outlook.com">adamsdye@outlook.com</a> ·
+      <a href="https://github.com/adye1">GitHub</a> ·
+      <a href="https://www.credly.com/users/adam-dye">Credly</a> ·
+      <a href="https://adamdye.substack.com" rel="me">Substack</a>
+    </p>
 
-      <p class="meta">
-        <span>Chesapeake, VA</span>
-        <span>Open to relocation and remote</span>
-        <a href="mailto:adamsdye@outlook.com">adamsdye@outlook.com</a>
-        <a href="https://github.com/adye1">github.com/adye1</a>
-        <a href="https://www.credly.com/users/adam-dye">credly</a>
-        <a href="https://adamdye.substack.com" rel="me">substack</a>
-      </p>
-
-      <dl class="stats">
-        <div><dt>13,000+</dt><dd>users governed across nuclear energy</dd></div>
-        <div><dt>17</dt><dd>countries in scope</dd></div>
-        <div><dt>325</dt><dd>person tenant migrated to Microsoft GCC</dd></div>
-        <div><dt>300+</dt><dd>vendors in third-party risk governance</dd></div>
-      </dl>
-    </div>
+    <p class="actions"><a class="button" href="Adam-Dye-Resume.pdf" download>Download resume (PDF)</a></p>
   </header>
 
   <main id="main" class="wrap">
     <section id="profile" aria-labelledby="h-profile">
-      <h2 id="h-profile"><span class="idx">01</span> Professional profile</h2>
-      <p class="lede">Security architect and leader with 10+ years designing, building, and validating security for classified, critical infrastructure, and regulated environments. Hands-on with Zero Trust segmentation, tiered administration, PKI, SIEM, and Microsoft 365 / GCC security, and builds adversarial AI testing environments for prompt injection and data leakage assessment. Led the security design and delivery of a 325-person organization's cloud tenant migration, coordinating the MSP and third-party integrations. Previously governed security for 13,000+ users across 17 countries in nuclear energy, and served as senior technical authority on security validation for classified naval combat systems.</p>
+      <h2 id="h-profile">Profile</h2>
+      <p>Security architect and leader with 10+ years designing, building, and validating security for classified, critical infrastructure, and regulated environments. Hands-on with Zero Trust segmentation, tiered administration, PKI, SIEM, and Microsoft 365 / GCC security, and builds adversarial AI testing environments for prompt injection and data leakage assessment. Led the security design and delivery of a 325-person organization's cloud tenant migration, coordinating the MSP and third-party integrations. Previously governed security for 13,000+ users across 17 countries in nuclear energy, and served as senior technical authority on security validation for classified naval combat systems.</p>
 
-      <h3 class="sub">Core competencies</h3>
-      <ul class="chips">
-        <li>Zero Trust &amp; Network Segmentation</li>
-        <li>Cloud Security (Microsoft 365 / GCC)</li>
-        <li>AI / LLM Security Testing</li>
-        <li>Identity &amp; Tiered Administration (AD, PKI)</li>
-        <li>SIEM &amp; Detection (Wazuh)</li>
-        <li>Security Automation (PowerShell, Hyper-V)</li>
-        <li>Data Protection (Purview, DLP)</li>
-        <li>NIST 800-171 / 800-53 / CSF 2.0</li>
-        <li>Incident Response &amp; DFIR</li>
-        <li>Third-Party &amp; Supply Chain Risk</li>
-        <li>Disaster Recovery &amp; Continuity</li>
-        <li>Executive &amp; Board Communication</li>
-      </ul>
-    </section>
-
-    <section id="projects" aria-labelledby="h-projects">
-      <h2 id="h-projects"><span class="idx">02</span> Technical projects</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Zero Trust Compliance Enclave &amp; GRC Lab</h3>
-          <p>Built and scripted (PowerShell, Hyper-V) a segmented 11-VM environment aligned to NIST SP 800-171 / CMMC L2: default-deny OPNsense boundary, dual domain controllers with tiered admin model, offline-root and issuing PKI, Wazuh SIEM, and encrypted, audited file shares. CISO Assistant GRC platform tracks assets, evidence, risk, and POA&amp;M.</p>
-          <p class="links"><a href="https://github.com/adye1/cui-enclave-lab">source on GitHub →</a></p>
-        </article>
-        <article class="card">
-          <h3>AI Governance &amp; Security Testing Lab</h3>
-          <p>Adversarial AI testing environment for model risk validation, prompt injection testing, data leakage assessment, and governance policy development aligned to NIST AI RMF.</p>
-        </article>
-        <article class="card">
-          <h3>Cloud Resume Challenge on Azure</h3>
-          <p>This site. Static hosting on Azure Storage behind a Cloudflare Worker with HSTS and a strict CSP, a serverless Python visitor-counter API on Azure Functions and Cosmos DB, Bicep infrastructure as code, and GitHub Actions CI/CD with passwordless OIDC, an SBOM, dual vulnerability scanning, CodeQL, and enforced signed commits.</p>
-          <p class="links"><a href="https://github.com/adye1/crc-frontend">frontend →</a> <a href="https://github.com/adye1/crc-backend">backend →</a> <a href="https://adamdye.substack.com/p/what-a-security-leader-learned-building">write-up →</a></p>
-        </article>
-      </div>
+      <h3>Core competencies</h3>
+      <p class="plain-list">Zero Trust &amp; network segmentation · Cloud security (Microsoft 365 / GCC) · AI / LLM security testing · Identity &amp; tiered administration (AD, PKI) · SIEM &amp; detection (Wazuh) · Security automation (PowerShell, Hyper-V) · Data protection (Purview, DLP) · NIST 800-171 / 800-53 / CSF 2.0 · Incident response &amp; DFIR · Third-party &amp; supply chain risk · Disaster recovery &amp; continuity · Executive &amp; board communication</p>
     </section>
 
     <section id="experience" aria-labelledby="h-experience">
-      <h2 id="h-experience"><span class="idx">03</span> Professional experience</h2>
-      <ol class="timeline">
-        <li>
-          <p class="dates">2026 – present</p>
+      <h2 id="h-experience">Experience</h2>
+
+      <article class="job">
+        <header>
           <h3>Chief Information Security Officer (CISO)</h3>
-          <p class="org">T-Solutions, Inc.</p>
-          <ul>
-            <li>Led the security design and delivery of a 325-person organization's enterprise tenant migration to Microsoft Government Community Cloud (GCC), Microsoft's government cloud, coordinating the managed service provider (MSP) and third-party integrations to meet contractual security requirements.</li>
-            <li>Fully implemented the NIST SP 800-171 control environment, positioning the organization for CMMC Level 2.</li>
-            <li>Deployed and administer Microsoft 365 security and compliance controls: Purview data governance, DLP, information protection, insider risk management, and audit/eDiscovery.</li>
-            <li>Set enterprise security direction and advise executives on risk posture and investment.</li>
-          </ul>
-        </li>
-        <li>
-          <p class="dates">2021 – 2026</p>
+          <p class="dates">2026 – present</p>
+        </header>
+        <p class="org">T-Solutions, Inc.</p>
+        <ul>
+          <li>Led the security design and delivery of a 325-person organization's enterprise tenant migration to Microsoft Government Community Cloud (GCC), Microsoft's government cloud, coordinating the managed service provider (MSP) and third-party integrations to meet contractual security requirements.</li>
+          <li>Fully implemented the NIST SP 800-171 control environment, positioning the organization for CMMC Level 2.</li>
+          <li>Deployed and administer Microsoft 365 security and compliance controls: Purview data governance, DLP, information protection, insider risk management, and audit/eDiscovery.</li>
+          <li>Set enterprise security direction and advise executives on risk posture and investment.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
           <h3>Supervisor, IT Governance, Risk Management &amp; Security</h3>
-          <p class="org">Westinghouse Electric Company</p>
-          <ul>
-            <li>Directed enterprise cybersecurity governance for 13,000+ users across 17 countries in nuclear energy critical infrastructure.</li>
-            <li>Led compliance alignment across NIST CSF 2.0, NIST 800-53, ISO 27001, SOC 2, NIS2, CRA, GDPR, and NERC; guided the organization through three independent NIST assessments and earned external recognition from PwC for program maturity.</li>
-            <li>Built and led a global team executing 300+ risk assessments and 100+ policy exceptions annually; spearheaded enterprise GRC platform implementation.</li>
-            <li>Integrated cybersecurity into third-party risk governance across 300+ vendor relationships; designed an enterprise phishing resilience program.</li>
-          </ul>
-        </li>
-        <li>
-          <p class="dates">2018 – 2020</p>
+          <p class="dates">2021 – 2026</p>
+        </header>
+        <p class="org">Westinghouse Electric Company</p>
+        <ul>
+          <li>Directed enterprise cybersecurity governance for 13,000+ users across 17 countries in nuclear energy critical infrastructure.</li>
+          <li>Led compliance alignment across NIST CSF 2.0, NIST 800-53, ISO 27001, SOC 2, NIS2, CRA, GDPR, and NERC; guided the organization through three independent NIST assessments and earned external recognition from PwC for program maturity.</li>
+          <li>Built and led a global team executing 300+ risk assessments and 100+ policy exceptions annually; spearheaded enterprise GRC platform implementation.</li>
+          <li>Integrated cybersecurity into third-party risk governance across 300+ vendor relationships; designed an enterprise phishing resilience program.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
           <h3>Information Systems Security Officer / Intelligence Analyst</h3>
-          <p class="org">T-Solutions, Inc.</p>
-          <ul>
-            <li>Administered a 2,000+ user enterprise environment with 100% availability across 200+ accounts, and led business continuity through multiple parallel disaster recovery scenarios.</li>
-          </ul>
-        </li>
-        <li>
-          <p class="dates">2016 – 2021</p>
+          <p class="dates">2018 – 2020</p>
+        </header>
+        <p class="org">T-Solutions, Inc.</p>
+        <ul>
+          <li>Administered a 2,000+ user enterprise environment with 100% availability across 200+ accounts, and led business continuity through multiple parallel disaster recovery scenarios.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
           <h3>Earlier career: Electronic Warfare, Program Management, and Doctrine</h3>
-          <p class="org">Warrant Technologies, Stratascorp, Prevailance</p>
-          <ul>
-            <li>Senior technical authority on security validation for classified naval combat systems; directed delivery of technical intelligence libraries and expanded production capacity 10x; developed doctrine across 12+ programs.</li>
-          </ul>
-        </li>
-        <li>
-          <p class="dates">1996 – 2016</p>
+          <p class="dates">2016 – 2021</p>
+        </header>
+        <p class="org">Warrant Technologies, Stratascorp, Prevailance</p>
+        <ul>
+          <li>Senior technical authority on security validation for classified naval combat systems; directed delivery of technical intelligence libraries and expanded production capacity 10x; developed doctrine across 12+ programs.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
           <h3>Chief Cryptologic Technician / Technical Leader</h3>
-          <p class="org">United States Navy</p>
-          <ul>
-            <li>20-year career as an award-winning information security and operations leader across global deployments; managed cross-functional teams and multi-million-dollar system installations, including a $15M emerging technology integration.</li>
-          </ul>
-        </li>
-      </ol>
+          <p class="dates">1996 – 2016</p>
+        </header>
+        <p class="org">United States Navy</p>
+        <ul>
+          <li>20-year career as an award-winning information security and operations leader across global deployments; managed cross-functional teams and multi-million-dollar system installations, including a $15M emerging technology integration.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" aria-labelledby="h-projects">
+      <h2 id="h-projects">Projects</h2>
+
+      <article class="project">
+        <h3>Zero Trust Compliance Enclave &amp; GRC Lab</h3>
+        <p>Built and scripted (PowerShell, Hyper-V) a segmented 11-VM environment aligned to NIST SP 800-171 / CMMC L2: default-deny OPNsense boundary, dual domain controllers with tiered admin model, offline-root and issuing PKI, Wazuh SIEM, and encrypted, audited file shares. CISO Assistant GRC platform tracks assets, evidence, risk, and POA&amp;M. <a href="https://github.com/adye1/cui-enclave-lab">Source on GitHub</a></p>
+      </article>
+
+      <article class="project">
+        <h3>AI Governance &amp; Security Testing Lab</h3>
+        <p>Adversarial AI testing environment for model risk validation, prompt injection testing, data leakage assessment, and governance policy development aligned to NIST AI RMF.</p>
+      </article>
+
+      <article class="project">
+        <h3>Cloud Resume Challenge on Azure</h3>
+        <p>This site. Static hosting on Azure Storage behind a Cloudflare Worker with HSTS and a strict CSP, a serverless Python visitor-counter API on Azure Functions and Cosmos DB, Bicep infrastructure as code, and GitHub Actions CI/CD with passwordless OIDC, an SBOM, dual vulnerability scanning, CodeQL, and enforced signed commits. <a href="https://github.com/adye1/crc-frontend">Frontend</a> · <a href="https://github.com/adye1/crc-backend">Backend</a> · <a href="https://adamdye.substack.com/p/what-a-security-leader-learned-building">Write-up</a></p>
+      </article>
     </section>
 
     <section id="certs" aria-labelledby="h-certs">
-      <h2 id="h-certs"><span class="idx">04</span> Credentials</h2>
-      <p class="note">Active credentials, verified on <a href="https://www.credly.com/users/adam-dye">Credly</a>. Select a badge to see its verification page.</p>
-
-      <h3 class="sub">Security &amp; risk</h3>
-      <ul class="badges">
-        <li><a href="https://www.credly.com/badges/7e15030c-bf97-45c6-92d0-ed4ebcd85f1a"><img src="img/badges/7e15030c-bf97-45c6-92d0-ed4ebcd85f1a.png" alt="" width="75" height="75" loading="lazy"><span>CISSP</span></a></li>
-        <li><a href="https://www.credly.com/badges/8c036343-e6ca-4f8a-b66d-dd24c75ac9c1"><img src="img/badges/8c036343-e6ca-4f8a-b66d-dd24c75ac9c1.png" alt="" width="75" height="75" loading="lazy"><span>CISM</span></a></li>
-        <li><a href="https://www.credly.com/badges/395ac72f-2488-4380-8edc-b9e672c6ac12"><img src="img/badges/395ac72f-2488-4380-8edc-b9e672c6ac12.png" alt="" width="75" height="75" loading="lazy"><span>CRISC</span></a></li>
-        <li><a href="https://www.credly.com/badges/e1de202b-63c7-4d7f-8d4f-e805de63a982"><img src="img/badges/e1de202b-63c7-4d7f-8d4f-e805de63a982.png" alt="" width="75" height="75" loading="lazy"><span>CCSP</span></a></li>
-        <li><a href="https://www.credly.com/badges/24892e78-8f20-48da-8122-19b20cb953c7"><img src="img/badges/24892e78-8f20-48da-8122-19b20cb953c7.png" alt="" width="75" height="75" loading="lazy"><span>CompTIA SecAI+</span></a></li>
-        <li><a href="https://www.credly.com/badges/7eed88ce-8831-4a3c-a44f-febb38251dcf"><img src="img/badges/7eed88ce-8831-4a3c-a44f-febb38251dcf.png" alt="" width="75" height="75" loading="lazy"><span>CompTIA CySA+</span></a></li>
-        <li><a href="https://www.credly.com/badges/53319774-aee4-44b8-a925-6c316c0875a9"><img src="img/badges/53319774-aee4-44b8-a925-6c316c0875a9.png" alt="" width="75" height="75" loading="lazy"><span>CompTIA Security+</span></a></li>
-        <li><a href="https://www.credly.com/badges/e3a6073f-c031-4bf1-bf50-fd4a14457759"><img src="img/badges/e3a6073f-c031-4bf1-bf50-fd4a14457759.png" alt="" width="75" height="75" loading="lazy"><span>CompTIA CSAP</span></a></li>
-        <li><a href="https://www.credly.com/badges/d4fb572f-8a8d-4126-9658-833a069e1a38"><img src="img/badges/d4fb572f-8a8d-4126-9658-833a069e1a38.png" alt="" width="75" height="75" loading="lazy"><span>Blue Team Level 1</span></a></li>
+      <h2 id="h-certs">Certifications</h2>
+      <ul class="certs">
+        <li><a href="https://www.credly.com/badges/7e15030c-bf97-45c6-92d0-ed4ebcd85f1a">CISSP</a></li>
+        <li><a href="https://www.credly.com/badges/8c036343-e6ca-4f8a-b66d-dd24c75ac9c1">CISM</a></li>
+        <li><a href="https://www.credly.com/badges/395ac72f-2488-4380-8edc-b9e672c6ac12">CRISC</a></li>
+        <li><a href="https://www.credly.com/badges/24892e78-8f20-48da-8122-19b20cb953c7">CompTIA SecAI+</a></li>
       </ul>
-
-      <h3 class="sub">Cloud &amp; infrastructure</h3>
-      <ul class="badges">
-        <li><a href="https://www.credly.com/badges/3f4529b4-22c1-4b1b-8a8f-06f962de0b93"><img src="img/badges/3f4529b4-22c1-4b1b-8a8f-06f962de0b93.png" alt="" width="75" height="75" loading="lazy"><span>Google Associate Cloud Engineer</span></a></li>
-        <li><a href="https://www.credly.com/badges/a82d5590-7416-45f1-b09c-a739f859c2f2"><img src="img/badges/a82d5590-7416-45f1-b09c-a739f859c2f2.png" alt="" width="75" height="75" loading="lazy"><span>GCP Skill: Load Balancing</span></a></li>
-        <li><a href="https://www.credly.com/badges/a17c287e-0059-4ca9-9924-4a2080db9c99"><img src="img/badges/a17c287e-0059-4ca9-9924-4a2080db9c99.png" alt="" width="75" height="75" loading="lazy"><span>Azure Fundamentals AZ-900</span></a></li>
-        <li><a href="https://www.credly.com/badges/4fc12f44-b9b6-40cb-8f49-34ef22b5b388"><img src="img/badges/4fc12f44-b9b6-40cb-8f49-34ef22b5b388.png" alt="" width="75" height="75" loading="lazy"><span>Security, Compliance &amp; Identity SC-900</span></a></li>
-        <li><a href="https://www.credly.com/badges/37f16df4-ef86-46e1-9df0-a01226b8c689"><img src="img/badges/37f16df4-ef86-46e1-9df0-a01226b8c689.png" alt="" width="75" height="75" loading="lazy"><span>Azure Data Fundamentals DP-900</span></a></li>
-        <li><a href="https://www.credly.com/badges/f04532e6-d009-4176-a0fe-f18e114504b9"><img src="img/badges/f04532e6-d009-4176-a0fe-f18e114504b9.png" alt="" width="75" height="75" loading="lazy"><span>Azure AI Fundamentals AI-900</span></a></li>
-        <li><a href="https://www.credly.com/badges/8c43e078-05be-4a65-af66-a78f6c510dfb"><img src="img/badges/8c43e078-05be-4a65-af66-a78f6c510dfb.png" alt="" width="75" height="75" loading="lazy"><span>Kubernetes &amp; Cloud Native Essentials</span></a></li>
-      </ul>
-
-      <h3 class="sub">Application &amp; supply-chain security</h3>
-      <ul class="badges">
-        <li><a href="https://www.credly.com/badges/79909c1e-7be9-4ba3-a770-be9038ae02e1"><img src="img/badges/79909c1e-7be9-4ba3-a770-be9038ae02e1.png" alt="" width="75" height="75" loading="lazy"><span>OWASP API Security Top 10</span></a></li>
-        <li><a href="https://www.credly.com/badges/dee86398-0491-4d19-bdf0-33b8c68281f6"><img src="img/badges/dee86398-0491-4d19-bdf0-33b8c68281f6.png" alt="" width="75" height="75" loading="lazy"><span>API Security Fundamentals</span></a></li>
-        <li><a href="https://www.credly.com/badges/fd90aad3-2946-493c-a9a4-e8f34892ba5b"><img src="img/badges/fd90aad3-2946-493c-a9a4-e8f34892ba5b.png" alt="" width="75" height="75" loading="lazy"><span>Generating a Software Bill of Materials</span></a></li>
-      </ul>
-
-      <h3 class="sub">AI &amp; data</h3>
-      <ul class="badges">
-        <li><a href="https://www.credly.com/badges/939fe844-28d1-4a83-9a19-f458246cfeba"><img src="img/badges/939fe844-28d1-4a83-9a19-f458246cfeba.png" alt="" width="75" height="75" loading="lazy"><span>Google AI Essentials</span></a></li>
-        <li><a href="https://www.credly.com/badges/efecf369-aff8-4f7c-a66e-dd9207dbd99f"><img src="img/badges/efecf369-aff8-4f7c-a66e-dd9207dbd99f.png" alt="" width="75" height="75" loading="lazy"><span>IBM AI Essentials</span></a></li>
-        <li><a href="https://www.credly.com/badges/38553806-3217-4f25-9e94-17cdf41dd640"><img src="img/badges/38553806-3217-4f25-9e94-17cdf41dd640.png" alt="" width="75" height="75" loading="lazy"><span>Generative AI: Prompt Engineering</span></a></li>
-        <li><a href="https://www.credly.com/badges/73c3156e-4a70-4846-b496-9fb2ea273054"><img src="img/badges/73c3156e-4a70-4846-b496-9fb2ea273054.png" alt="" width="75" height="75" loading="lazy"><span>Data Engineering Essentials</span></a></li>
-        <li><a href="https://www.credly.com/badges/6aaae963-3c8c-4326-b565-c83088a56376"><img src="img/badges/6aaae963-3c8c-4326-b565-c83088a56376.png" alt="" width="75" height="75" loading="lazy"><span>Data Analytics Essentials</span></a></li>
-        <li><a href="https://www.credly.com/badges/8b5f5513-8553-48ee-bd72-fcc2898f0765"><img src="img/badges/8b5f5513-8553-48ee-bd72-fcc2898f0765.png" alt="" width="75" height="75" loading="lazy"><span>Data Science Methodology</span></a></li>
-        <li><a href="https://www.credly.com/badges/fd1cc4d5-bdab-4078-b681-42426f7a4940"><img src="img/badges/fd1cc4d5-bdab-4078-b681-42426f7a4940.png" alt="" width="75" height="75" loading="lazy"><span>Data Science Orientation</span></a></li>
-      </ul>
-
-      <h3 class="sub">IT fundamentals</h3>
-      <ul class="badges">
-        <li><a href="https://www.credly.com/badges/2defdf33-be99-4b2f-9fb2-21e3d9c68b74"><img src="img/badges/2defdf33-be99-4b2f-9fb2-21e3d9c68b74.png" alt="" width="75" height="75" loading="lazy"><span>Google IT Support Certificate</span></a></li>
-      </ul>
-
-      <h3 class="sub">In progress</h3>
-      <ul class="chips chips-dashed">
-        <li>Microsoft AZ-104 Azure Administrator</li>
-        <li>Certified DevSecOps Professional (CDP), Practical DevSecOps</li>
-      </ul>
+      <p class="note">Each links to its verification page on Credly.</p>
     </section>
 
     <section id="education" aria-labelledby="h-education">
-      <h2 id="h-education"><span class="idx">05</span> Education</h2>
+      <h2 id="h-education">Education</h2>
       <p>Bachelor of Arts, Biblical &amp; Theological Studies · Regent University</p>
     </section>
   </main>
 
   <footer class="wrap">
-    <p class="prompt"><span class="cmd" aria-hidden="true">$ visitors --count</span> <span class="count">Visitors: <span id="counter">…</span></span></p>
-    <p class="fine">Built on Azure and Cloudflare. <a href="https://github.com/adye1/crc-frontend">Source and pipeline on GitHub.</a> Writing on <a href="https://adamdye.substack.com" rel="me">Substack</a>.</p>
+    <p>Visitors: <span id="counter">…</span></p>
+    <p class="fine">Built on Azure and Cloudflare. <a href="https://github.com/adye1/crc-frontend">Source and pipeline on GitHub.</a></p>
   </footer>
 
   <script src="counter.js"></script>

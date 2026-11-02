@@ -57,6 +57,8 @@ a { color: var(--link); text-underline-offset: 3px; }
 /* ---------- header ---------- */
 .top { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--line); }
 h1 { margin: 0; font-size: clamp(2.25rem, 7vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
+.creds { margin: 0.35rem 0 0; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em; }
+.highlights { margin: 0 0 1rem; padding: 0.6rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.9rem; font-weight: 600; }
 .role { margin: 0.5rem 0 0; font-size: 1.25rem; font-weight: 500; }
 .focus { margin: 0.15rem 0 0; color: var(--muted); }
 .meta { margin: 1.25rem 0 0; color: var(--muted); font-size: 0.95rem; }
@@ -114,7 +116,7 @@ footer p { margin: 0 0 0.35rem; }
   .job li, .project p, .plain-list { font-size: 9.5pt; }
   .job li { margin-bottom: 0.15rem; }
   .wrap { width: 100%; }
-  .skip, .actions, footer, .note { display: none; }
+  .skip, .actions, footer, .note, .highlights { display: none; }
   .top { padding: 0 0 0.75rem; }
   h1 { font-size: 24pt; }
   main section { padding-top: 0.8rem; }
